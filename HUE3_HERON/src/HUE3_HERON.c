@@ -63,6 +63,7 @@ int main(void) {
 	// Calculation of the square root with the function SquareRoot
 	result = SqareRoot(number,precision);
 
+	// Output of the result:
 	printf("Squareroot from radicand: %lf\t=\t%lf\tPrecision=%lf\n\n", number, result, precision);
 
 	PAUSE;
