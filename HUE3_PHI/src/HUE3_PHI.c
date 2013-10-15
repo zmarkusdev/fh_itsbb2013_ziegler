@@ -1,19 +1,20 @@
-/*
- ============================================================================
- Name        : HUE3_PHI.c
- Author      : Markus Ziegler
- Date		 : 13.10.2013
- Version     :
- Copyright   : Your copyright notice
- Description :
- Die Eulersche PHI-Funktion gibt für jede natürliche Zahl n an, wie viele zu n teilerfremde natürliche Zahlen es gibt, die nicht größer als n sind:
- Das Programm liest n ein und gibt die Anzahl der zu n teilerfremden natürlichen Zahlen aus.
- ============================================================================
+/**
+ * Die Eulersche PHI-Funktion gibt für jede natürliche Zahl n an, wie viele zu n teilerfremde natürliche Zahlen es gibt, die nicht größer als n sind:
+ * Das Programm liest n ein und gibt die Anzahl der zu n teilerfremden natürlichen Zahlen aus.
+ * @author Markus Ziegler (Jahrgang: 2013)
+ * @file HUE3_PHI.c
+ * @date 13.10.2013
+ * @date_modified 15.10.2013
+ * Geschätzter Zeitaufwand: 15 Minuten
+ * Tatsächlicher Zeitaufwand: 15 Minuten
+ * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
  */
 
+/*Includes:*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Defines:*/
 #define PAUSE printf("Enter to continue...");fgetc(stdin);
 /*
  * Eclipse console does not show output on Windows
@@ -27,11 +28,12 @@
 // only for values >= 0 !
 int Pow(int base, int exponent){
 	int result = base;
-	if(exponent==0)
+	if(exponent==0) // Every number to the power of 0 is 1
 	{
 		return 1;
 	} else {
 		int i;
+		// Pow calculation:
 		for(i=1; i<exponent;i++){
 			result *= base;
 		}
@@ -75,11 +77,15 @@ int Phi(int number) {
 int main(void) {
 	WINECLIPSE; // WinEclipse Workaround
 
+	// Variable definition:
 	int number;
 	int totativeCount;
+
+
 	printf("Enter digit for Euler's phi function phi(n):\nn=");
 	scanf("%d",&number);
 
+	// Calculation of the totative count with the euler phi function
 	totativeCount = Phi(number);
 	printf("\n\nphi(%d) = %d\n\n", number, totativeCount);
 

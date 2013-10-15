@@ -1,21 +1,22 @@
-/*
- ============================================================================
- Name        : HUE3_U_ATOI.c
- Author      : Markus Ziegler
- Date		 : 12.10.2013
- Version     :
- Copyright   : Your copyright notice
- Description :
- Siehe auch: 03-c-grundlagen/02-ueben/01-ue-c-grundlagen-ohne-array/
- Bringen Sie das folgende Programm u_atoi.c zum Laufen:
- Liest einen Ziffernstring ein und wandelt diesen in eine INT-Zahl um und gibt
- diese aus
- ============================================================================
+/**
+ * Siehe auch: 03-c-grundlagen/02-ueben/01-ue-c-grundlagen-ohne-array/
+ * Bringen Sie das folgende Programm u_atoi.c zum Laufen:
+ * Liest einen Ziffernstring ein und wandelt diesen in eine INT-Zahl um und gibt
+ * diese aus
+ * @author Markus Ziegler (Jahrgang: 2013)
+ * @file HUE3_U_ATOI.c
+ * @date 12.10.2013
+ * @date_modified 15.10.2013
+ * Geschätzter Zeitaufwand: 15 Minuten
+ * Tatsächlicher Zeitaufwand: 15 Minuten
+ * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
  */
 
+/*Includes:*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Defines:*/
 #define PAUSE printf("Enter to continue...");fgetc(stdin);
 /*
  * Eclipse console does not show output on Windows

@@ -1,41 +1,19 @@
-/*
- ============================================================================
- Name        : HUE03_MYCAT.c
- Author      : Markus Ziegler
- Date		 : 12.10.2013
- Version     :
- Copyright   : Your copyright notice
- Description :
-	Schreiben Sie folg. Programm so um, dass jede Ausgabezeile mit der Zeilennummer (6stelliges Feld) beginnt:
-
-		//mycat.c  Eingabe nach Ausgabe
-		#include <stdio.h>
-		int main(){
-			int ch;
-			while ( (ch= fgetc(stdin)) != EOF)
-				fputc(ch, stdout);
-
-			return 0;
-		}
-
-	Aufruf: mycat.exe < eingabedatei.txt
-
-		Eingabedatei: eingabedatei.txt
-		Ein recht bekanntes Spiel ist das Nimm-Spiel (mit zwei m):
-		Es werden z.B. 20 MÃ¼nzen auf den Tisch gelegt, und die beiden Spieler
-
-		Ausgabe:
-		1     Ein recht bekanntes Spiel ist das Nimm-Spiel (mit zwei m):
-		2     Es werden z.B. 20 MÃ¼nzen auf den Tisch gelegt, und die beiden Spieler
-
- ============================================================================
+/**
+ * Schreiben Sie folg. Programm so um, dass jede Ausgabezeile mit der Zeilennummer (6stelliges Feld) beginnt:
+ * @author Markus Ziegler (Jahrgang: 2013)
+ * @file HUE03_MYCAT.c
+ * @date 12.10.2013
+ * @date_modified 15.10.2013
+ * Geschätzter Zeitaufwand: 15 Minuten
+ * Tatsächlicher Zeitaufwand: 15 Minuten
+ * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
  */
 
-
-//mycat.c  Eingabe nach Ausgabe
+/*Includes:*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Defines:*/
 #define PAUSE printf("Enter to continue...");fgetc(stdin);
 /*
  * Eclipse console does not show output on Windows
@@ -48,13 +26,17 @@
 int main(){
 	WINECLIPSE; // WinEclipse Workaround
 
+	// Program start
 
+	// Variable definition:
 	int ch;
-	int lineNumber = 1;
+	int lineNumber = 1; // Line number count variable
 
-	printf("%-6d",lineNumber); // INITIAL output current lineCount
+	// INITIAL output current lineCount:
+	printf("%-6d",lineNumber);
 	lineNumber++;
 
+	// Read user input and output line numbers after newline char
 	while ( (ch= fgetc(stdin)) != EOF){
 		fputc(ch, stdout);
 		if(ch == '\n'){
@@ -64,6 +46,7 @@ int main(){
 	}
 
 
+	// Program end
 	PAUSE;
 	return EXIT_SUCCESS;
 }

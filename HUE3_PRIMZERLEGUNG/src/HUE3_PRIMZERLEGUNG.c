@@ -1,20 +1,19 @@
-/*
- ============================================================================
- Name        : HUE3_PRIMZERLEGUNG.c
- Author      : Markus Ziegler
- Date        : 12.10.2013
- Version     :
- Copyright   : Your copyright notice
- Description :
- Siehe auch: 03-c-grundlagen/02-ueben/01-ue-c-grundlagen-ohne-array/
-Nach Eingabe einer natürlichen Zahl n soll die Zerlegung von n in Primfaktoren ausgegeben werden.
-Beispiel für eine Ausgabe zu n = 100:
-        100 = 2 * 2 * 5 * 5 .
-
-Hinweis: Teste die Teiler d = 2, 3, ...
-im Erfolgsfalle, d.h wenn d ein Teiler von n ist, dann: n= n / d   (mit n > 1)
-sonst: nimm den nächsten Teiler
- ============================================================================
+/**
+ * Siehe auch: 03-c-grundlagen/02-ueben/01-ue-c-grundlagen-ohne-array/
+ * Nach Eingabe einer natürlichen Zahl n soll die Zerlegung von n in Primfaktoren ausgegeben werden.
+ * Beispiel für eine Ausgabe zu n = 100:
+ *         100 = 2 * 2 * 5 * 5 .
+ *
+ * Hinweis: Teste die Teiler d = 2, 3, ...
+ * im Erfolgsfalle, d.h wenn d ein Teiler von n ist, dann: n= n / d   (mit n > 1)
+ * sonst: nimm den nächsten Teiler
+ * @author Markus Ziegler (Jahrgang: 2013)
+ * @file HUE3_PRIMZERLEGUNG.c
+ * @date 13.10.2013
+ * @date_modified 15.10.2013
+ * Gesch�tzter Zeitaufwand: 15 Minuten
+ * Tats�chlicher Zeitaufwand: 15 Minuten
+ * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
  */
 
 #include <stdio.h>

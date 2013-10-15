@@ -1,19 +1,20 @@
-/*
- ============================================================================
- Name        : HUE3_HEX2INT.c
- Author      : Markus Ziegler
- Date	     : 12.10.2013
- Version     :
- Copyright   : Your copyright notice
- Description :
- Erstellen Sie das Programm hex2int.c, das nur gueltige Hex-Ziffern zur Umwandlung
- in eine int-Variable verwendet. Die umgewandelte int-Zahl soll dann ausgegeben werden.
- ============================================================================
+/**
+ * Erstellen Sie das Programm hex2int.c, das nur gueltige Hex-Ziffern zur Umwandlung
+ * in eine int-Variable verwendet. Die umgewandelte int-Zahl soll dann ausgegeben werden.
+ * @author Markus Ziegler (Jahrgang: 2013)
+ * @file HUE3_HEX2INT.c
+ * @date 12.10.2013
+ * @date_modified 15.10.2013
+ * Geschätzter Zeitaufwand: 15 Minuten
+ * Tatsächlicher Zeitaufwand: 15 Minuten
+ * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
  */
 
+/*Includes:*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Defines:*/
 #define PAUSE printf("Enter to continue...");fgetc(stdin);
 /*
  * Eclipse console does not show output on Windows
@@ -26,8 +27,9 @@
 int main(void) {
 	WINECLIPSE; // WinEclipse Workaround
 
-
-	int ch, num=0; // Starting number is 0
+	// Variable definition
+	int ch;
+	int num=0; // Starting number is 0
 
 	ch=fgetc(stdin); // or   ch=getchar()
 	while (ch != '\n'){
