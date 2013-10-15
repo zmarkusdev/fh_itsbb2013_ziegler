@@ -2,8 +2,8 @@
  * Berechnung der Quadratwurzel der Zahl a durch die Newton-Iteration (=HERONsche Formel):
  * x n+1 =  ( x n + a / x n ) / 2
  * @author Markus Ziegler (Jahrgang: 2013)
- * @file HUE3_U_ATOI.c
- * @date 12.10.2013
+ * @file HUE3_HERON.c
+ * @date 15.10.2013
  * @date_modified 15.10.2013
  * Geschätzter Zeitaufwand: 15 Minuten
  * Tatsächlicher Zeitaufwand: 15 Minuten
