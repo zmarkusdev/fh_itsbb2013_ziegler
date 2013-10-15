@@ -23,19 +23,6 @@
  */
 #define WINECLIPSE setvbuf(stdout, NULL, _IONBF, 0);setvbuf(stderr, NULL, _IONBF, 0);
 
-// Checks if the given number is a prime number.
-// Returns 1 if the number is a prime number.
-int IsPrim(int number){
-	int i;
-
-	for(i=2; i<number; i++){
-		if(number % i == 0){
-			return 0; // if i is a factor of number, number MOD i will result in 0 and 0 will be returned.
-		}
-	}
-	return 1; // If this point of code is reached, the number is a prime number
-}
-
 // Calculates parameter base to the power of parameter exponent
 // only for values >= 0 !
 int Pow(int base, int exponent){
@@ -65,19 +52,15 @@ int Phi(int number) {
 	while(factor <= number) // if factor is greater then the current number, break out of loop
 	{
 		// euler's phi function added to the standard prime factorization
-		if(IsPrim(factor) == 1){
-			if(number % factor == 0){
-				number /= factor;
-				exponent++;
-			} else {
-				if(exponent > 0){
-					sumFactors *= Pow(factor,exponent-1) * (factor-1); // for the formula for the euler's phi function look at wikipedia source link
-					exponent = 0;
-				}
-				factor++;
-			}
+		if(number % factor == 0){
+			number /= factor;
+			exponent++;
 		} else {
-			factor ++;
+			if(exponent > 0){
+				sumFactors *= Pow(factor,exponent-1) * (factor-1); // for the formula for the euler's phi function look at wikipedia source link
+				exponent = 0;
+			}
+			factor++;
 		}
 	}
 	if(exponent > 0){

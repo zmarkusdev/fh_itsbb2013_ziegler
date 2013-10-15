@@ -30,33 +30,16 @@ sonst: nimm den nächsten Teiler
 #define WINECLIPSE setvbuf(stdout, NULL, _IONBF, 0);setvbuf(stderr, NULL, _IONBF, 0);
 
 
-// Checks if the given number is a prime number.
-// Returns 1 if the number is a prime number.
-int IsPrim(int number){
-	int i;
-
-	for(i=2; i<number; i++){
-		if(number % i == 0){
-			return 0; // if i is a factor of number, number MOD i will result in 0 and 0 will be returned.
-		}
-	}
-	return 1; // If this point of code is reached, the number is a prime number
-}
-
 void PrintPrimFactors(int number) {
 	int factor = 2;
 	printf("Primfactors of %d:",number);
 	while(factor <= number) // if factor is greater then the current number, break out of loop
 	{
-		if(IsPrim(factor) == 1){
-			if(number % factor == 0){
-				number /= factor;
-				printf(" %d",factor);
-			} else {
-				factor++;
-			}
+		if(number % factor == 0){
+			number /= factor;
+			printf(" %d",factor);
 		} else {
-			factor ++;
+			factor++;
 		}
 	}
 }
