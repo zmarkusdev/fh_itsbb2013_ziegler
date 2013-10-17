@@ -22,8 +22,8 @@
  *
  * @author Markus Ziegler (Jahrgang: 2013)
  * @file HUE3_KREISPUNKT.c
- * @date 13.10.2013
- * @date_modified 15.10.2013
+ * @date 17.10.2013
+ * @date_modified 17.10.2013
  * Geschätzter Zeitaufwand: 15 Minuten
  * Tatsächlicher Zeitaufwand: 15 Minuten
  * GIT-REPO: https://github.com/Kingviech/fh_itsbb2013_ziegler.git
